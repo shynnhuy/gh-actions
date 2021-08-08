@@ -25,7 +25,7 @@ test("render counter increment button with ( + ) label", () => {
   expect(getByTestId("increment-btn")).toHaveTextContent("+");
 });
 
-test("counter decrement button click event decrease from 10 to 9", () => {
+test("counter button decrement 1 click event decrease from 10 to 9", () => {
   const { getByTestId } = render(<Counter />, {
     initialState: { counter: { value: 10 } },
   });
@@ -33,7 +33,7 @@ test("counter decrement button click event decrease from 10 to 9", () => {
   expect(getByTestId("counter-value")).toHaveValue("9");
 });
 
-test("counter increment button click event increase from 5 to 6", () => {
+test("counter button increment 1 click event increase from 5 to 6", () => {
   const { getByTestId } = render(<Counter />, {
     initialState: { counter: { value: 5 } },
   });
